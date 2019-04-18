@@ -7,7 +7,7 @@ La base de datos se deja configurada en sqllite para facilitar la instalación y
 
 Se realizan solo test funcionales, al considerar que no existe funcionalidad para pruebas unitarias.
 
-Teniendo en cuenta lo indicado en las intrucciones se realiza una aplicación simple en más o menos en una hora. 
+Teniendo en cuenta lo indicado en las intrucciones se realiza una aplicación simple en más o menos una hora. 
 
 
 

@@ -32,7 +32,7 @@ Instalación
     $ php bin/console server:run
     ```
     
-    Acceder a httpd://127.0.0.1:8000/books
+    Acceder a http://127.0.0.1:8000/books
     
 6. Ejecutar test
 

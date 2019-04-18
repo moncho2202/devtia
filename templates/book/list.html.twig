@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class = "container">
+    <h2>Books</h2>
+    {{ form_start(filter, {'method': 'GET'}) }}
+    {{ form_widget(filter) }}
+    {{ form_rest(filter) }}
+    <input type="submit" value="Search" class="btn btn-primary btn" />
+    {{ form_end(filter) }}
+    <a href="{{ path('new_book') }}" class="float-right">Add Book</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">{{ knp_pagination_sortable(pagination, 'Title', 'b.title') }}</th>
+            <th scope="col">{{ knp_pagination_sortable(pagination, 'Author', 'b.author') }}</th>
+            <th scope="col">Description</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for book in pagination %}
+            <tr>
+                <td scope="row">{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.description }}</td>
+                <td><a href="{{ path('edit_book', {'book': book.slug}) }}">edit</a></td>
+                <td><a href="{{ path('delete_book', {'book': book.slug}) }}">delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="navigation">
+        {{ pagination.getTotalItemCount }} Books
+        {{ knp_pagination_render(pagination) }}
+    </div>
+</div>
+{% endblock %}

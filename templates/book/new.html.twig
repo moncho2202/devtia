@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class = "container">
+    <h2>New Book</h2>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+
+    <input type="submit" class="btn btn-primary my-2" value="Create"/>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

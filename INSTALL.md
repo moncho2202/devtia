@@ -34,7 +34,13 @@ Instalación
     
     Acceder a http://127.0.0.1:8000/books
     
-6. Ejecutar test
+6. Ejecutar comando para contar el numero de libros
+
+    ```bash
+    $ php bin/console books:count
+    ```
+    
+7. Ejecutar test
 
     ```bash
     $ ./bin/phpunit
